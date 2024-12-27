@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        html,
+        body{            
+            width: 100%;
+            height: 100%;
+        }
+        body{
+            overflow-x: hidden;
+        }
+        #page1{
+            height: 100vh;
+            width: 100%;
+            background-color: rgb(159, 222, 247);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #page2{
+            height: 100vh;
+            /* width: 100%; */
+            background-color: rgb(61, 179, 226);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #page2 h1{
+            width: 100%;
+            font-size: 35vw;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+        #page3{
+            height: 100vh;
+            width: 100%;
+            background-color: rgb(3, 109, 151);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #box{
+            width: 200px;
+            height: 200px;
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="page1">
+        <div id="box"></div>
+    </div>
+    <div id="page2">
+        <h1>experiences the joyful life</h1>
+    </div>
+    <div id="page3">
+        <div id="box"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+        integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <script>
+           
+            gsap.to("#page2 h1", {
+               transform : "translateX(-550%)",
+               duration : "5",
+                scrollTrigger : {
+                    trigger : "#page2 ",
+                    scroller : "body",
+                    markers : true,
+                    start : "top 0%",
+                    end : "top -200%",
+                    scrub : 2,
+                    pin : true
+                }
+            })
+           
+        </script>
+
+</body>
+
+</html>

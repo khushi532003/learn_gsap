@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap : 20px;
+            height: 100vh;
+            padding: 0 50px;
+        }
+        .box{
+            width: 120px;
+            height: 100px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <script>
+            // gsap.from(".box" , {opacity : 0, delay : 1, stagger : 1 })
+            // gsap.from(".box" , {opacity : 0, delay : 1, stagger : {from  : "edges", amount : 1} })
+            gsap.from(".box" , {opacity : 0, delay : 1, stagger : {from  : "edges", each : 0.5, repeat : -1} })
+        </script>
+</body>
+</html>

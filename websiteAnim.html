@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+
+        }
+
+        nav .navs {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        nav h2 i {
+            display: inline-block;
+            rotate: 45deg;
+            margin-right: 5px;
+        }
+
+        nav .navs h4 {
+            font-weight: 500;
+            text-transform: capitalize;
+        }
+
+        nav button {
+            padding: 14px 30px;
+            border: 1px solid #000;
+            border-radius: 10px;
+            background-color: transparent;
+            font-size: 16px;
+        }
+
+        .center {
+            display: flex;
+            width: 95%;
+            margin: auto;
+            padding: 30px 0px;
+            position: relative;
+        }
+
+        .center .centerLeft {
+            width: 40%;
+        }
+
+        .center .centerLeft h1 {
+            font-size: 50px;
+            font-family: monospace;
+        }
+
+        .center .centerLeft p {
+            font-size: 18px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            width: 95%;
+        }
+
+        .center .centerLeft button {
+            font-size: 18px;
+            padding: 15px 20px;
+            background-color: #000;
+            color: #fff;
+            border-radius: 10px;
+            border: none;
+        }
+
+        .center .centerRight {
+            width: 60%;
+        }
+
+        .center .centerRight img {
+            position: absolute;
+            right: 0;
+            height: 100%;
+        }
+
+        .section1Btm {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 100px 60px;
+            gap: 30px;
+        }
+
+        .section1Btm img {
+            height: 50px;
+        }
+
+        .section2 {
+            height: 100vh;
+            padding: 30px 80px;
+        }
+
+        .section2 .heading {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .section2 .heading h2 {
+            font-size: 40px;
+            background-color: #b9ff66;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        .section2 .heading p {
+            font-size: 18px;
+            font-weight: 500;
+            width: 60%;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 50px 0px;
+        }
+
+        .container .box {
+            flex-shrink: 0;
+            width: 45%;
+            height: 250px;
+            border-radius: 50px;
+            padding: 40px;
+            box-shadow: 0px 5px 0px black;
+            border: 2px solid #000;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .box .boxLeft {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            height: 100%;
+            justify-content: space-between;
+            width: 50%;
+        }
+
+        .box .boxLeft h2 {
+            background-color: #b9ff66;
+            padding: 0px 5px;
+            border-radius: 5px;
+            width: 95%;
+        }
+
+        .box .boxLeft h4 {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            font-size: 20px;
+        }
+
+        .box .boxLeft h4 i {
+            padding: 10px;
+            border-radius: 50%;
+            background-color: #000;
+            color: #fff;
+            font-size: 14px;
+        }
+
+        .box .boxRight {
+            width: 50%;
+        }
+
+        .box .boxRight img {
+            width: 80%;
+        }
+
+        .black {
+            background-color: #000;
+        }
+
+        .black .boxLeft h2 {
+            background: #fff;
+            color: #000;
+        }
+
+        .black .boxLeft h4 {
+            color: #fff;
+        }
+
+        .black .boxLeft h4 i {
+            background-color: #fff;
+            color: #000;
+        }
+        .section3{
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="section1">
+        <nav>
+            <h2><i class="ri-shining-2-fill"></i>WizardZ</h2>
+            <div class="navs">
+                <h4>About us</h4>
+                <h4>Services</h4>
+                <h4>Our Courses</h4>
+                <h4>Pricing</h4>
+                <h4>blog</h4>
+                <button>Request a Quote</button>
+            </div>
+        </nav>
+        <div class="center">
+            <div class="centerLeft">
+                <h1>Navigating the digital landscape for success</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, cupiditate recusandae dolore
+                    repudiandae corporis temporibus numquam nulla eveniet! Repudiandae ullam dolore pariatur iure
+                    obcaecati rerum dolorum fugit quo quae at?</p>
+                <button>Book a consultation</button>
+            </div>
+            <div class="centerRight">
+                <img src="https://www.quantech.pro/static/media/hero.d3af2e625f224024da4a.png" alt="">
+            </div>
+        </div>
+        <div class="section1Btm">
+            <img src="https://dhjhkxawhe8q4.cloudfront.net/thomasnelson-wp/wp-content/uploads/sites/5/2024/07/15154418/amazon-logo-black-transparent-1.png"
+                alt="">
+            <img src="https://www.cdnlogo.com/logos/d/18/dribbble.svg" alt="">
+            <img src="https://tbkconsult.com/wp-content/uploads/2016/11/HubSpot-Logo-PNG.png" alt="">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Pinterest_Logo.svg/1200px-Pinterest_Logo.svg.png"
+                alt="">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png" alt="">
+        </div>
+    </section>
+
+    <section class="section2">
+        <div class="heading">
+            <h2>Services</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis dolorem fugit excepturi, deserunt
+                ratione veniam?</p>
+        </div>
+
+        <div class="container">
+            <div class="box left1 ">
+                <div class="boxLeft">
+                    <h2>Search engine optimization</h2>
+                    <h4><i class="ri-arrow-right-up-line"></i>Learn more</h4>
+                </div>
+                <div class="boxRight ">
+                    <img src="https://www.quantech.pro/static/media/hero.d3af2e625f224024da4a.png" alt="">
+                </div>
+            </div>
+            <div class="box black right1">
+                <div class="boxLeft">
+                    <h2>Pay per click advertisement</h2>
+                    <h4><i class="ri-arrow-right-up-line"></i>Learn more</h4>
+                </div>
+                <div class="boxRight">
+                    <img src="https://www.quantech.pro/static/media/hero.d3af2e625f224024da4a.png" alt="">
+                </div>
+            </div>
+            <div class="box black left2">
+                <div class="boxLeft">
+                    <h2>Social media marketing</h2>
+                    <h4><i class="ri-arrow-right-up-line"></i>Learn more</h4>
+                </div>
+                <div class="boxRight">
+                    <img src="https://www.quantech.pro/static/media/hero.d3af2e625f224024da4a.png" alt="">
+                </div>
+            </div>
+            <div class="box right right2">
+                <div class="boxLeft">
+                    <h2>E-mail marketing</h2>
+                    <h4><i class="ri-arrow-right-up-line"></i>Learn more</h4>
+                </div>
+                <div class="boxRight">
+                    <img src="https://www.quantech.pro/static/media/hero.d3af2e625f224024da4a.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section3"></section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+        integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        function page1Animation() {
+            var tl = gsap.timeline()
+
+            tl.from("nav h2, nav h4, nav button", {
+                y: -30,
+                delay: 0.7,
+                duration: 1,
+                opacity: 0,
+                stagger: 0.15
+            })
+
+            tl.from(".centerLeft h1", {
+                x: -400,
+                duration: 0.5,
+                opacity: 0
+            })
+            tl.from(".centerLeft p", {
+                x: -200,
+                duration: 0.3,
+                opacity: 0
+            })
+            tl.from(".centerLeft button", {
+                duration: 0.2,
+                opacity: 0
+            })
+            tl.from(".centerRight img", {
+                duration: 0.2,
+                opacity: 0
+            }, "-=1")
+            tl.from(".section1Btm img", {
+                y: 30,
+                duration: 0.6,
+                opacity: 0,
+                stagger: 0.15
+            })
+        }
+
+        page1Animation()
+
+        function page2Animation(){
+            var tl2 = gsap.timeline({
+                scrollTrigger: {
+                    trigger: ".section2",
+                    scroller: "body",
+                    scrub: 2,
+                    start: "top 70%",
+                    end: "top -50%",
+                    markers: true
+                }
+            })
+            tl2.from(".heading", {
+                y: 30,
+                opacity: 0,
+                duration: 0.5,
+            })
+
+            tl2.from(".heading h2", {
+                x: -100,
+                opacity: 0,
+                duration: 1,
+            })
+            tl2.from(".box.left1", {
+                x: -100,
+                opacity: 0,
+                duration: 0.8,
+            }, "first")
+            tl2.from(".box.right1", {
+                x: 100,
+                opacity: 0,
+                duration: 0.8,
+            }, "first")
+            tl2.from(".box.left2", {
+                x: -100,
+                opacity: 0,
+                duration: 0.8,
+            }, "second")
+            tl2.from(".box.right2", {
+                x: 100,
+                opacity: 0,
+                duration: 0.8,
+            }, "second")
+        }
+        
+        page2Animation()
+        </script>
+
+</body>
+
+</html>

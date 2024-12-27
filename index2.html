@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        .container,
+        .container2 {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container p {
+            font-size: 60px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .container2 {
+            gap: 20px;
+            background-color: #000;
+            color: rgba(255, 255, 255, 0.2);
+        }
+
+        .word {
+            display: flex;
+        }
+
+        .char {
+            font-size: 60px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <p>scroll down</p>
+    </div>
+    <div class="container2">
+        <div class="word">
+            <div class="char">s</div>
+            <div class="char">u</div>
+            <div class="char">b</div>
+            <div class="char">s</div>
+            <div class="char">c</div>
+            <div class="char">r</div>
+            <div class="char">i</div>
+            <div class="char">b</div>
+            <div class="char">e</div>
+        </div>
+        <div class="word">
+            <div class="char">m</div>
+            <div class="char">y</div>
+        </div>
+        <div class="word">
+            <div class="char">c</div>
+            <div class="char">h</div>
+            <div class="char">a</div>
+            <div class="char">n</div>
+            <div class="char">n</div>
+            <div class="char">e</div>
+            <div class="char">l</div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+        integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <script>
+            gsap.to(".char", {color : "white", delay : "1.5", stagger : {from  : "edges", amount : 1}, scrollTrigger : {trigger : ".container2", start : "-50%, top" , markers : true, scrub : 1, end : "=+50"}})
+        </script>
+</body>
+
+</html>

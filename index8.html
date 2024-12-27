@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+            color: #fff
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        #main {
+            background-image: url(https://images.pexels.com/photos/998641/pexels-photo-998641.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+        }
+
+        #nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+        }
+
+        #nav h2 {
+            text-transform: uppercase;
+            font-size: 25px;
+        }
+
+        #nav i {
+            font-size: 35px;
+        }
+
+        #full {
+            width: 30%;
+            height: 100%;
+            background-color: #111;
+            position: absolute;
+            top: 0;
+            right: -30%;
+            padding: 100px 70px;
+            backdrop-filter: blur(50%);
+        }
+
+        #full h4 {
+            text-transform: capitalize;
+            font-weight: 500;
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        #full i {
+            position: absolute;
+            top: 4%;
+            right: 10%;
+            font-size: 18px;
+            background-color: #fff;
+            color: #111;
+            padding: 10px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div id="nav">
+            <h2>codewithkhushi</h2>
+            <i class="ri-menu-3-line"></i>
+        </div>
+        <div id="full">
+            <h4>home</h4>
+            <h4>about</h4>
+            <h4>services</h4>
+            <h4>courses</h4>
+            <h4>contact us</h4>
+            <i class="ri-close-large-line"></i>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <script>
+
+          var menu = document.querySelector("#nav i")
+          var cross = document.querySelector("#full i")
+
+            var tl = gsap.timeline()
+
+            tl.to("#full", {
+                right : "0",
+                duration : "0.5"
+            })
+            tl.from("#full h4", {
+                x : 150,
+                duration : "0.6",
+                stagger : 0.2,
+                opacity : 0
+            })
+            tl.from("#full i", {                                
+                opacity : 0
+            })
+
+            tl.pause()
+
+            menu.addEventListener("click", function(){
+                tl.play()
+            })
+            cross.addEventListener("click", function(){
+                tl.reverse()
+            })
+        </script>
+</body>
+
+</html>

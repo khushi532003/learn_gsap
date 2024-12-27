@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+            color: #fff
+        }
+
+        body {
+            background-color: #111;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #main h1 {
+            font-size: 5vw;
+            text-transform: uppercase;
+            /* background-color: red; */
+            overflow: hidden;
+
+        }
+
+        h1 span {
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="main">
+        <h1>khushikashyap</h1>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+
+        function breakText() {
+            var h1 = document.querySelector("h1")
+            var h1Text = h1.textContent
+
+            var splittedText = h1Text.split("")
+
+            var clutter = ""
+
+            var halfText = Math.floor(splittedText.length/2)
+            console.log(halfText);
+            
+
+            splittedText.forEach(function (elem, index) {
+                if(index< halfText){
+                    clutter += `<span class="a">${elem}</span>`
+                    console.log(elem);
+                    
+                }else{
+                    clutter += `<span class="b">${elem}</span>`   
+                    console.log("ndfk",elem);
+
+                }
+                
+            })
+
+            h1.innerHTML = clutter
+        }
+        breakText()
+
+        gsap.from("h1 .a", {
+            y: 70,
+            stagger : 0.15,
+            opacity : 0,
+            duration : 0.8,
+            delay : 0.5
+        })
+        gsap.from("h1 .b", {
+            y: 70,
+            stagger : -0.15,
+            opacity : 0,
+            duration : 0.8,
+            delay : 0.5
+        })
+
+
+
+
+
+    </script>
+</body>
+
+</html>

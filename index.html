@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .hero{
+            height: 100vh;
+            text-align: center;
+            background-color: #222121;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .hero h4{
+            color: #fff;
+            font-size: 50px;
+        }
+        .img{
+            position: absolute;
+            background-size: cover;
+        }
+        .img1{
+            height: 300px;
+            width: 200px;
+            background-image: url(https://img.freepik.com/premium-photo/beautiful-planet-mars-gallaxy-surrounded-by-wonders_841543-29413.jpg);
+            top: 150px;
+            left: 100px;
+            transform: rotate(5deg);
+        }
+        .img2{
+            height: 250px;
+            width: 200px;
+            background-image: url(https://wallpapers.com/images/featured/3d-galaxy-4io58y5d17av1ln2.jpg);
+            bottom: 0px;
+            transform: rotate(5deg);
+        }
+        .img3{
+            height: 250px;
+            width: 150px;
+            background-image: url(https://wallpaper.forfun.com/fetch/23/234fa19d353107469d1cdffbc6758bb6.jpeg);
+            top: 180px;
+            right: 100px;
+            transform: rotate(-5deg);
+        }
+        .second{
+             height: 100vh;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .second p{
+             font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <h4>Parallex Effect</h4>
+        <div class="img img1"></div>
+        <div class="img img2"></div>
+        <div class="img img3"></div>
+    </section>
+    <section class="second">
+        <p class="heading">Pretty Cool !</p>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+            integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+            <script>
+
+                gsap.to(".img2", {y: "-900" , scale : "1.5",  scrollTrigger : {trigger : ".hero", start : "top top", scrub: true, markers : true}})
+                gsap.to(".img1", {y: "-500" , scale : "1.2", scrollTrigger : {trigger : ".hero", start : "top top", scrub: true, markers : true}})
+                gsap.to(".img3", {y: "-300" , scale : "1.2", scrollTrigger : {trigger : ".hero", start : "top top", scrub: true, markers : true}})
+            </script>
+</body>
+</html>
